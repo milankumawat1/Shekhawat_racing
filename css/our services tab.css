@@ -1,0 +1,54 @@
+/* navbar  */
+
+#navbar #logo
+{
+    position: relative;
+    left: 1rem;
+    top: 0.4rem;
+}
+
+#navbar #logo img {
+   
+    height: 4rem;
+    width: auto;
+    
+}
+
+
+#navbar #jersy
+{
+    position: absolute;
+    right:  2rem;
+    
+}
+
+
+#navbar #jersy img
+{
+    
+    height: 3.5rem;
+    width: auto;
+    
+}
+
+
+
+/* navbar menu  */
+#navbar ul {
+    display: flex;
+    list-style: none;
+    width: auto;
+    margin: 0px auto;
+}
+
+#navbar ul li
+{
+    margin: 1rem;
+    font-size: 1rem;
+}
+
+/* heading  */
+h2
+{
+    font-size: 4em;
+}

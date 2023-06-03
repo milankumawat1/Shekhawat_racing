@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: black;
+    color: white;
+}
+
+/* burger  */
+
+.burger
+{
+    display: none;
+    position: absolute;
+    right: 20%;
+    top: 7px;
+
+   
+}
+
+.line
+{
+    background: white;
+    width: 20px;
+    margin: 3px;
+    height: 3px;
+    
+
+}
+
+
+/* navbar  */
+
+
+
+
+#navbar
+{
+    display: flex;
+    align-items: center;
+    top: 0;
+    
+}
+
+#navbar #logo
+{
+    position: relative;
+    left: 2rem;
+    top: 0.4rem;
+}
+
+#navbar #logo img {
+   
+    height: 7rem;
+    width: auto;
+    
+}
+
+
+#navbar #jersy
+{
+    position: absolute;
+    right:  4rem;
+    
+}
+
+
+#navbar #jersy img
+{
+    
+    height: 6rem;
+    width: auto;
+    
+}
+
+/* navbar menu  */
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    width: auto;
+    margin: 0px auto;
+}
+
+
+
+#navbar ul li
+{
+    margin: 2rem;
+    font-size: 1.5rem;
+    
+}
+
+#navbar ul li a 
+{
+    text-decoration: none;
+    color: deeppink;
+}
+
+#navbar ul li a:hover
+{
+    color: white;
+} 
+ 
+
+
+/* heading  */
+
+
+.tb{
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent , #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 4s linear infinite;
+    margin: 4rem 0rem;
+}
+
+@keyframes animate{
+    0%, 18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        /* box-shadow: none; */
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+         0 0 20px #03bcf4,
+         0 0 40px #03bcf4,
+         0 0 80px #03bcf4,
+         0 0 160px #03bcf4;
+
+    }
+}
+
+
+/* content  */
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hexagon{
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: 50px 20px 70px;
+}
+
+.hexagon::before{
+    content: ' ';
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(rgba(44, 42, 42, 0.308),transparent,transparent);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.hexagon:hover::before{
+    opacity: 0.8;
+    transform: scale(0.8);
+}
+
+
+.shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    transition: 00.5s;
+   
+}
+
+ .hexagon:hover .shape{
+     transform: translateY(-30px);
+ }
+
+ 
+
+ .shape img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .content{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     text-align: center;
+     background: linear-gradient(45deg, #03a9f4,rgba(3,169,244,0.37));
+     color: #fff;
+     opacity: 0;
+     transition: 0.5s;
+     
+ }
+
+ .container .hexagon:hover .shape .content{
+     opacity: 1;
+
+ }
+
+
+ /* footer  */
+ footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+
+
+/* RESPONSIVE  */
+@media only screen and (max-width: 600px){
+    #navbar
+    {
+        display: flex;
+        flex-direction: column;
+        background: black;
+    }
+    
+    #navbar ul
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        margin: 0px 0px;
+        width: 100%;
+        justify-content: left;
+        justify-items: left;
+        transition: all 0.7s ease-out;
+        
+    }
+    
+    .hide
+    {
+        opacity: 0;
+    }
+    
+    .burger
+    {
+        display: block;
+        width: 5.5%;
+        left: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+    
+    .rh{
+        height: 74px;
+    }
+    
+    }
